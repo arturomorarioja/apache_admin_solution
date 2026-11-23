@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Rewrite the catalogue URL to the corresponding PHP entry point.
+RewriteRule ^articles/?$ articles.php [END]
+
+# Capture the article ID and pass it as the id query parameter.
+RewriteRule ^articles/([0-9]+)/?$ article.php?id=$1 [END,QSA]
+
+# Permanently redirect the obsolete URL to the articles page.
+RewriteRule ^old-blog/?$ /articles [R=301,END]

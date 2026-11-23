@@ -1,0 +1,2 @@
+# No directory listing when no index file exists.
+Options -Indexes
